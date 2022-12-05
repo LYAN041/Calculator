@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@800&display=swap');
+@import 'variables';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+#body {
+  height: 100vh;
+  background: $main-background;
+  font-family: 'League Spartan', sans-serif;
+  font-weight: 700;
+  transition: .34s;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#calculator {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  color: $text-secondary;
+  font-family: 'League Spartan', sans-serif;
+  padding-top: 0;
+}
+
+#container {
+  color: $text-secondary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  align-self: flex-end;
+  color: $text-secondary;
+  text-transform: lowercase;
+}
+
+p {
+  margin-bottom: 5px !important;
+  margin-right: 40px !important;
+  align-self: flex-end;
+  font-size: .75rem;
+  color: $text-secondary;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-bottom: 0;
+  margin: 20px;
+}
+
+#screen {
+  border-radius: 10px;
+  background: $screen-background;
+  color: $text-secondary;
+  padding: 12px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#display {
+  width: 100% !important;
+  height: 100% !important;
+  text-align: right;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background: inherit;
+  color: inherit;
+  border: 0;
+  padding: 12px;
+}
+
+#buttons {
+  display: grid;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  background: $pad-background;
+  justify-content: center;
+  border-radius: 10px;
+
+  #equals{
+  background: $toggle-background;
+  color: $text-secondary;
+  box-shadow: 0 5px 0 0 $toggle-shadow;
+  grid-column: span 2;
+  }
+
+  #delete{
+  padding-left: 10px;
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 32px;
+  color: $text-secondary;
+  background: $special-key;
+  box-shadow: 0 5px 0 0 $special-shadow;
+  }
+
+  #reset{
+  font-size: 30px;
+  color: $text-secondary;
+  background: $special-key;
+  box-shadow: 0 5px 0 0 $special-shadow;
+  text-transform: uppercase;
+  font-weight: bold;
+  grid-column: span 2;
+  }
+
+}
+
+#buttons button {
+  padding: 15px 20px;
+  font-weight: bold;
+  font-size: 2rem;
+  color: $main-background;
+  background: $key-background;
+  border-radius: 5px;
+  border: 0;
+  box-shadow: 0 5px 0 0 $key-shadow;
+  outline: none;
+  transition: transform .34s, box-shadow .3s;
+  user-select: none;
+
+  &:hover{
+  box-shadow: 0 0px 0 0 $key-shadow !important;
+  transform: translateY(4px) scaleY(1.03);
+  cursor: pointer;
+  opacity: .5;
+  }
+}
